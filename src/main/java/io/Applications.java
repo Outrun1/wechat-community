@@ -26,7 +26,8 @@ public class Applications {
 						"数据库监控: \t\thttp://{}:{}/druid\n" +
 						"----------------------------------------------------------------",
 				env.getProperty("spring.application.name"),
-				InetAddress.getLocalHost().getHostAddress(),
+				//InetAddress.getLocalHost().getHostAddress(),
+				"127.0.0.1",
 				env.getProperty("server.port"),
 				"127.0.0.1",
 				env.getProperty("server.port"));
