@@ -9,7 +9,7 @@ for (let i = 0; i < Math.floor(Math.random() * 10 + 1); i++) {
     'remark': '@csentence',
     'createUserId': 1,
     'menuIdList': '@range(1, 10, 2)',
-    'createTime': '
+    'createTime': '@datetime'
   }))
 }
 

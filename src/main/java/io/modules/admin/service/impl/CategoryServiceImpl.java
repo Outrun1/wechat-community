@@ -1,6 +1,7 @@
 
 package io.modules.admin.service.impl;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.common.exception.CommunityException;
 import io.modules.admin.entity.PostEntity;
 import io.modules.admin.service.PostService;
@@ -72,4 +73,17 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
         this.removeByIds(list);
     }
 
+    /**
+     * 通过餐厅查询菜品
+     *
+     * @param restaurantId
+     */
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public List<CategoryEntity> getByResId(Integer restaurantId) {
+        QueryWrapper<CategoryEntity> queryWrapper=new QueryWrapper<>();
+        queryWrapper.lambda().eq(CategoryEntity::getRestaurantId,restaurantId);
+        queryWrapper.lambda().orderByDesc(CategoryEntity::getCateId);
+        return this.list(queryWrapper);
+    }
 }

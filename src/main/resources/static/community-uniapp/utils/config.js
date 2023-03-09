@@ -1,4 +1,4 @@
-const miniappName = "社交论坛"; //分享时的标题
+const miniappName = "美食先知"; //分享时的标题
 const shareH5Url = "https://www.linfeng.tech/#/"; //H5分享路径
 
 

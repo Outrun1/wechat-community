@@ -26,6 +26,10 @@ public class CategoryEntity implements Serializable {
 	@TableId
 	private Integer cateId;
 	/**
+	 * 餐厅id
+	 */
+	private Integer restaurantId;
+	/**
 	 * 分类名称
 	 */
 	private String cateName;

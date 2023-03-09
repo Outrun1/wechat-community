@@ -22,5 +22,7 @@ public interface CategoryService extends IService<CategoryEntity> {
     void saveCategory(CategoryEntity category);
 
     void deleteByIdList(List<Integer> list);
+
+    List<CategoryEntity> getByResId(Integer restaurantId);
 }
 

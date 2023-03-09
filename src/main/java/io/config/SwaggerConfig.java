@@ -35,8 +35,8 @@ public class SwaggerConfig implements WebMvcConfigurer {
 
     private ApiInfo apiInfo(){
         return new ApiInfoBuilder()
-                .title("社交论坛接口文档")
-                .description("社交论坛接口文档 官网")
+                .title("美食先知接口文档")
+                .description("美食先知接口文档 官网")
                 .contact(new Contact("Comunnity","http:localhost:8080/doc.html","401047902@qq.com"))
                 .version("1.0")
                 .build();

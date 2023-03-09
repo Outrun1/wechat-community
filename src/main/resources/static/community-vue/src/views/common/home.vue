@@ -3,8 +3,8 @@
     <h2>数据概览</h2>
 
     <!-- <h4>
-      社交圈子是基于Springboot MybatisPlus Shiro Jwt Vue Uniapp Redis
-      MySQL构建的社交app平台
+      美食先知是基于Springboot MybatisPlus Shiro Jwt Vue Uniapp Redis
+      MySQL构建的美食先知app平台
     </h4> -->
     <!--头部-->
     <base-info ref="baseInfo"/>

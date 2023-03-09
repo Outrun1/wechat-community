@@ -5,8 +5,8 @@ var dataList = []
 for (let i = 0; i < Math.floor(Math.random() * 10 + 1); i++) {
   dataList.push(Mock.mock({
     'id': '@increment',
-    'url': 'http://oapk0ekso.bkt.clouddn.com/upload/
-    'createDate': '
+    'url': 'http://oapk0ekso.bkt.clouddn.com/upload/@date("yyyyMMdd")/@guid().png',
+    'createDate': '@datetime'
   }))
 }
 

@@ -12,7 +12,7 @@ for (let i = 0; i < Math.floor(Math.random() * 10 + 1); i++) {
     'cronExpression': '0 0/30 * * * ?',
     'status': 1,
     'remark': '@csentence',
-    'createTime': '
+    'createTime': '@datetime'
   }))
 }
 

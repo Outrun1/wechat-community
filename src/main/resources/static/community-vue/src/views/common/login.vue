@@ -3,10 +3,10 @@
     <div class="site-content__wrapper">
       <div class="site-content">
         <div class="brand-info">
-          <h2 class="brand-info__text">社交论坛后台系统</h2>
+          <h2 class="brand-info__text">美食先知后台系统</h2>
           <p class="brand-info__intro">
             基于Springboot MybatisPlus Shiro Jwt Vue Uniapp Redis
-            MySQL构建的社交app平台
+            MySQL构建的美食先知小程序平台
           </p>
         </div>
         <div class="login-main">

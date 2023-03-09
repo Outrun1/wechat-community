@@ -6,45 +6,21 @@
 			<u-tabs :list="pageTab" :current="pageCurrent" @change="pageTabChange"></u-tabs>
 		</u-navbar>
 		<!-- 创作广场 -->
-		<view v-show="pageCurrent == 0">
+		<view>
 			<!-- 分类 -->
 			<view class="tabs-wrap">
 				<u-tabs :list="classList" name="cateName" :current="current" @change="tabChange"></u-tabs>
 			</view>
-			<view v-show="current == 0">
-				<!-- 轮播图 -->
+			<!-- 轮播图 -->
+			<!-- <view v-show="current == 0">
 				<view class="wrap">
 					<u-swiper :list="swiperList" name="img" border-radius="20" mode="dot" :effect3d="true"></u-swiper>
 				</view>
-			</view>
+			</view> -->
 			<!-- 帖子列表 -->
 			<post-list :list="postList" :loadStatus="loadPostStatus"></post-list>
 		</view>
-		<!-- 发帖达人 -->
-		<view v-show="pageCurrent == 1">
-			<navigator :url="'/pages/user/home?uid=' + item.uid" class="user-item" hover-class="none"
-				v-for="(item, index) in userList" :key="index">
-				<view v-if="index < 10" class="user-index-hot">{{ index + 1 }}</view>
-				<view v-else class="user-index">{{ index + 1 }}</view>
-				<image class="avatar" mode="aspectFill" :src="item.avatar"></image>
-				<view class="right">
-					<text class="username">{{ item.username }}</text>
-					<view class="tag-wrap">
-						<text class="tag" :key="index2">{{ item.intro }}</text>
-						<text class="tag" :key="index2">+{{ item.postNumber }}</text>
-					</view>
-				</view>
-			</navigator>
-			<!-- 加载状态 -->
-			<block v-if="userList.length === 0 && loadStatus == 'nomore'">
-				<u-empty margin-top="100" text="暂无内容" mode="favor"></u-empty>
-			</block>
-			<block v-else>
-				<view class="no-info">
-					<u-loadmore :status="loadStatus" />
-				</view>
-			</block>
-		</view>
+		
 
 
 		<!-- 发帖入口 -->
@@ -60,10 +36,10 @@
 				pageCurrent: 0,
 				current: 0,
 				pageTab: [{
-						name: '创作广场'
+						name: '荔天餐厅'
 					},
 					{
-						name: '发帖达人'
+						name: '实验餐厅'
 					}
 				],
 				classList: [{

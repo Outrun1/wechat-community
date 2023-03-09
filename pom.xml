@@ -6,7 +6,7 @@
 	<artifactId>community</artifactId>
 	<version>3.0.0</version>
 	<packaging>jar</packaging>
-	<description>社交论坛</description>
+	<description>美食先知</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

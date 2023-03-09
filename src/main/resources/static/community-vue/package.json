@@ -1,7 +1,7 @@
 {
   "name": "community-vue",
   "version": "1.2.2",
-  "description": "社交论坛后台管理前端",
+  "description": "美食先知后台管理前端",
   "author": "Outrun",
   "private": true,
   "scripts": {
