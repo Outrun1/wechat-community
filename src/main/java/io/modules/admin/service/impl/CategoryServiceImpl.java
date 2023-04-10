@@ -83,7 +83,6 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
     public List<CategoryEntity> getByResId(Integer restaurantId) {
         QueryWrapper<CategoryEntity> queryWrapper=new QueryWrapper<>();
         queryWrapper.lambda().eq(CategoryEntity::getRestaurantId,restaurantId);
-        queryWrapper.lambda().orderByDesc(CategoryEntity::getCateId);
         return this.list(queryWrapper);
     }
 }

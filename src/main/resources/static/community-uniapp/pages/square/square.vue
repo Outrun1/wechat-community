@@ -40,6 +40,9 @@
 					},
 					{
 						name: '实验餐厅'
+					},
+					{
+						name: '听山餐厅'
 					}
 				],
 				classList: [{
@@ -57,8 +60,8 @@
 		},
 		onLoad() {
 			this.getBannerList();
-			this.getPostList();
 			this.getClassList();
+			this.getPostList();
 			this.getUserRanking();
 		},
 		onReachBottom() {
@@ -102,6 +105,9 @@
 			},
 			pageTabChange(index) {
 				this.pageCurrent = index
+				console.log('pageCurrent:', this.pageCurrent)
+				this.getClassList();
+				this.tabChange(0);
 			},
 			tabChange(index) {
 				this.current = index
@@ -111,8 +117,14 @@
 				this.getPostList()
 			},
 			getClassList() {
-				this.$H.get('topic/classList').then(res => {
-					this.classList = this.classList.concat(res.result)
+				this.$H
+				.get('topic/foodList',{
+					restaurantId: this.pageCurrent
+				}).then(res => {
+					this.classList = [{
+					cateId: 0,
+					cateName: '推荐'
+				}].concat(res.result)
 				})
 			},
 			getUserRanking() {

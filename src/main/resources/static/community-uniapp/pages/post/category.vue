@@ -20,7 +20,9 @@
 		},
 		methods: {
 			getClassList() {
-				this.$H.get('topic/classList').then(res => {
+				this.$H.get('topic/foodList',{
+					restaurantId: 1
+				}).then(res => {
 					this.classList = res.result
 				})
 			},

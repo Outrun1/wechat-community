@@ -6,10 +6,7 @@ import io.modules.admin.service.CategoryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -34,9 +31,9 @@ public class AppCategoryController {
         return R.ok().put("result",list);
     }
 
-    @GetMapping("/foodList/{restaurantId}")
+    @GetMapping("/foodList")
     @ApiOperation("菜品列表")
-    public R foodList(@PathVariable("restaurantId") Integer restaurantId){
+    public R foodList(@RequestParam Integer restaurantId){
         List<CategoryEntity> list = categoryService.getByResId(restaurantId);
         return R.ok().put("result",list);
     }
